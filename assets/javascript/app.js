@@ -5,7 +5,7 @@ let unanswered = 0;
 let myTimer = 15;
 let myTimeCounter;
 let timeOut;
-let counter = 1;
+let counter = 0;
 let questions = [
     {
     q1: 1,
@@ -40,6 +40,11 @@ let questions = [
 //The game starts here //
 function startGame() {
     $(".guess-pack").removeClass('hide');
+    $(".display-4").hide();
+    $(".lead").hide();
+    $(".my-4").hide();
+    $(".buttonInfo").hide();
+    $("#start-game").hide();
     displayAsk();
 };
 //The timer starts counting down, asks the question, and shows the choices to pick from
@@ -58,10 +63,10 @@ function timer() {
 };
 
 function displayChoices() {
-    $(".choices1").html(questions[counter].choices1);
-    $(".choices2").html(questions[counter].choices2);
-    $(".choices3").html(questions[counter].choices3);
-    $(".choices4").html(questions[counter].choices4);
+    $("#choices1").html(questions[counter].choices1);
+    $("#choices2").html(questions[counter].choices2);
+    $("#choices3").html(questions[counter].choices3);
+    $("#choices4").html(questions[counter].choices4);
 };
 
 function timeDone() {
@@ -72,11 +77,37 @@ function timeDone() {
     clearInterval(timeOut);
     unanswered++;
     $(".outcome").html("<h1>You're out of time!</h1>");
-    settimeDone(nextQuestion, 3000);
+    setTimeout(nextQuestion, 3000);
 };
 
 function nextQuestion() {
-    $()
+    $(".guess-pack").removeClass('hide');
+    $(".outcome").hide();
+    clearInterval(myTimeCounter);
+    clearInterval(timeOut);
+    myTimer = 15
+    counter++;
+    if(questions.length === counter){
+        gameOver();
+    } 
+    else {
+        displayAsk();
+    }
+
 };
 
+function guessChoices(numero) {
+    if(numero === questions[counter].correctAns){
+        clearInterval(myTimeCounter);
+        clearInterval(timeOut);
+        correct++;
+        setTimeout(nextQuestion, 9000);
+    }   
+    else{
+        clearInterval(myTimeCounter);
+        clearInterval(timeOut);
+        incorrect++;
+        setTimeout(nextQuestion, 9000);
+    }
+};
 //});
