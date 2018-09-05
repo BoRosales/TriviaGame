@@ -1,0 +1,31 @@
+body{
+    font-family: "Poller One";
+
+    text-align: center;
+
+    color: rgb(77, 72, 72);
+
+    background-size: 100%;
+
+    background-repeat: no-repeat;
+
+    background-image: url(../images/congress.jpg);
+
+}
+
+.button{
+
+    text-align: center;
+
+    background-color: gray;
+
+}
+
+.navbar-nav{
+
+    color: rgb(77, 72, 72);
+
+    text-align: center;
+
+    float: none;
+}
