@@ -34,7 +34,12 @@
     <div class="questArea">
         <div class="row">
             <div class="col">
-                1 of 3
+                <p class="correct hidden">
+                </p>
+                <p class="incorrect hidden">
+                </p>
+                <p class="unanswered hidden">
+                </p>
             </div>
             <div class="col-6">
                 <div class="jumbotron">
@@ -44,30 +49,33 @@
                     <!--This asks you the actual question-->
                     <div class="asked-question">
                     </div>
-                    <div class="guess-pack hide">
+                    <div class="guess-pack hidden">
                         <button type="button" class="guess-pack-item choices" id="choices1" onclick="guessChoices(1)"></button>
                         <button type="button" class="guess-pack-item choices" id="choices2" onclick="guessChoices(2)"></button>
                         <button type="button" class="guess-pack-item choices" id="choices3" onclick="guessChoices(3)"></button>
                         <button type="button" class="guess-pack-item choices" id="choices4" onclick="guessChoices(4)"></button>
                     </div>
-                    <div class="outcome">
+                    <div class="outcome hidden">
+                    </div>
+                    <div class="right hidden">
+                    </div>
+                    <div class="wrong hidden">
                     </div>
                     <h1 class="display-4">Hello!</h1>
                     <p class="lead">Get ready to answer some questions about the official flying mammal of the state of Texas, the Mexican Freetailed Bat!</p>
                     <hr class="my-4">
                     <p class="buttonInfo">Hit the button to start trivia.</p>
                     <button class="btn btn-danger btn-lg" id="start-game" onclick="startGame()">Start</button>
+                    <button class='btn btn-danger btn-lg hidden' id="reset-game" onclick="reset()">Reset</button>
                 </div>
             </div>
             <div class="col">
                 <p class="timer">
-                    <!--<h2>Timer: 20s</h2>-->
+                    
                 </p>
             </div>
         </div>
     </div>
-
-
 <!--Jquery and JavaScript links-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>

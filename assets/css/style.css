@@ -32,6 +32,19 @@ body{
 
 button{
 
-    background-color: orange;
+    background-color: lightblue;
 
+    margin: 5px 5px 5px 5px;
+
+}
+
+.hidden {
+    
+    display: none;
+}
+
+.outcome {
+
+    color: red;
+    
 }
