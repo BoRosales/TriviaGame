@@ -135,16 +135,16 @@ function gameOver() {
         $(".correct").html('<p>' + correct + ' questions correct</p>');
     }
     if( incorrect === 1 ) {
-        $(".incorrect").html('<p>' + correct + ' question incorrect</p>');
+        $(".incorrect").html('<p>' + incorrect + ' question incorrect</p>');
     }
     else{
-        $(".incorrect").html('<p>' + correct + ' questions incorrect</p>');
+        $(".incorrect").html('<p>' + incorrect + ' questions incorrect</p>');
     }
     if( unanswered === 1 ) {
-        $(".unanswered").html('<p>' + correct + ' question unanswered</p>');
+        $(".unanswered").html('<p>' + unanswered + ' question unanswered</p>');
     }
     else{
-        $(".unanswered").html('<p>' + correct + ' questions unanswered</p>');
+        $(".unanswered").html('<p>' + unanswered + ' questions unanswered</p>');
     }
     $("#reset-game").removeClass('hidden');
 
